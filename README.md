@@ -102,9 +102,9 @@ This project is licensed under the [MIT License](LICENSE). 📝
 
 For any questions or feedback, feel free to reach out:
 
-- **Email:** your-email@example.com 📧
-- **GitHub:** [your-username](https://github.com/your-username) 🌐
-- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/your-profile) 💼
+- **Email:** contact.alokkumarr@gmail.com 📧
+- **GitHub:** [My GitHub Profile](https://github.com/smbgAlokk/Employee-Management-System) 🌐
+- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/alokkumarr04/) 💼
 
 ---
 
