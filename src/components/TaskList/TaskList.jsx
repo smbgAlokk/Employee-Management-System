@@ -1,136 +1,29 @@
 import React from "react";
+import AcceptTask from "./AcceptTask";
+import NewTask from "./NewTask";
+import CompleteTask from "./CompleteTask";
+import FailedTask from "./FailedTask";
 
 const TaskList = ({ data }) => {
   return (
     <div
       id="tasklist"
-      className="h-[55%] w-full overflow-x-auto flex items-center justify-start gap-5 flex-nowrap py-5 mt-10 rounded-md"
+      className="h-[50%] overflow-x-auto flex items-center justify-start gap-5 flex-nowrap w-full py-1 mt-16"
     >
-      <div className="h-full w-[300px] flex-shrink-0 bg-red-400 rounded-xl ml-5 p-5">
-        <div className="flex justify-between">
-          <h3 className="bg-red-600 px-3 py-1 rounded text-sm">High</h3>
-          <h4 className="text-sm">21 Nov 2024</h4>
-        </div>
-        <h2 className="mt-5 text-2xl font-semibold">
-          Prepare a ppt to show the client
-        </h2>
-        <p className="text-sm mt-2">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem
-          saepe sapiente rerum, voluptatibus culpa, ipsum repellendus nesciunt
-          autem quas officia fugiat amet ut voluptates veniam consequatur hic
-          labore sint.
-        </p>
-      </div>
-
-      <div className="h-full w-[300px] flex-shrink-0 bg-red-400 rounded-xl ml-5 p-5">
-        <div className="flex justify-between">
-          <h3 className="bg-green-700 px-3 py-1 rounded text-sm">Low</h3>
-          <h4 className="text-sm">21 Nov 2024</h4>
-        </div>
-        <h2 className="mt-5 text-2xl font-semibold">Call to Mr Chopra</h2>
-        <p className="text-sm mt-2">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem
-          saepe sapiente rerum, voluptatibus culpa, ipsum repellendus nesciunt
-          autem quas officia fugiat amet ut voluptates veniam consequatur hic
-          labore sint.
-        </p>
-      </div>
-
-      <div className="h-full w-[300px] flex-shrink-0 bg-red-400 rounded-xl ml-5 p-5">
-        <div className="flex justify-between">
-          <h3 className="bg-orange-400 px-3 py-1 rounded text-sm">Moderate</h3>
-          <h4 className="text-sm">21 Nov 2024</h4>
-        </div>
-        <h2 className="mt-5 text-2xl font-semibold">
-          MD Birthday celebration Next Month
-        </h2>
-        <p className="text-sm mt-2">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem
-          saepe sapiente rerum, voluptatibus culpa, ipsum repellendus nesciunt
-          autem quas officia fugiat amet ut voluptates veniam consequatur hic
-          labore sint.
-        </p>
-      </div>
-
-      <div className="h-full w-[300px] flex-shrink-0 bg-red-400 rounded-xl ml-5 p-5">
-        <div className="flex justify-between">
-          <h3 className="bg-red-600 px-3 py-1 rounded text-sm">High</h3>
-          <h4 className="text-sm">21 Nov 2024</h4>
-        </div>
-        <h2 className="mt-5 text-2xl font-semibold">
-          Prepare a ppt to show the client
-        </h2>
-        <p className="text-sm mt-2">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem
-          saepe sapiente rerum, voluptatibus culpa, ipsum repellendus nesciunt
-          autem quas officia fugiat amet ut voluptates veniam consequatur hic
-          labore sint.
-        </p>
-      </div>
-
-      <div className="h-full w-[300px] flex-shrink-0 bg-red-400 rounded-xl ml-5 p-5">
-        <div className="flex justify-between">
-          <h3 className="bg-red-600 px-3 py-1 rounded text-sm">High</h3>
-          <h4 className="text-sm">21 Nov 2024</h4>
-        </div>
-        <h2 className="mt-5 text-2xl font-semibold">
-          Prepare a ppt to show the client
-        </h2>
-        <p className="text-sm mt-2">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem
-          saepe sapiente rerum, voluptatibus culpa, ipsum repellendus nesciunt
-          autem quas officia fugiat amet ut voluptates veniam consequatur hic
-          labore sint.
-        </p>
-      </div>
-
-      <div className="h-full w-[300px] flex-shrink-0 bg-red-400 rounded-xl ml-5 p-5">
-        <div className="flex justify-between">
-          <h3 className="bg-red-600 px-3 py-1 rounded text-sm">High</h3>
-          <h4 className="text-sm">21 Nov 2024</h4>
-        </div>
-        <h2 className="mt-5 text-2xl font-semibold">
-          Prepare a ppt to show the client
-        </h2>
-        <p className="text-sm mt-2">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem
-          saepe sapiente rerum, voluptatibus culpa, ipsum repellendus nesciunt
-          autem quas officia fugiat amet ut voluptates veniam consequatur hic
-          labore sint.
-        </p>
-      </div>
-
-      <div className="h-full w-[300px] flex-shrink-0 bg-red-400 rounded-xl ml-5 p-5">
-        <div className="flex justify-between">
-          <h3 className="bg-red-600 px-3 py-1 rounded text-sm">High</h3>
-          <h4 className="text-sm">21 Nov 2024</h4>
-        </div>
-        <h2 className="mt-5 text-2xl font-semibold">
-          Prepare a ppt to show the client
-        </h2>
-        <p className="text-sm mt-2">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem
-          saepe sapiente rerum, voluptatibus culpa, ipsum repellendus nesciunt
-          autem quas officia fugiat amet ut voluptates veniam consequatur hic
-          labore sint.
-        </p>
-      </div>
-
-      <div className="h-full w-[300px] flex-shrink-0 bg-red-400 rounded-xl ml-5 p-5">
-        <div className="flex justify-between">
-          <h3 className="bg-red-600 px-3 py-1 rounded text-sm">High</h3>
-          <h4 className="text-sm">21 Nov 2024</h4>
-        </div>
-        <h2 className="mt-5 text-2xl font-semibold">
-          Prepare a ppt to show the client
-        </h2>
-        <p className="text-sm mt-2">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem
-          saepe sapiente rerum, voluptatibus culpa, ipsum repellendus nesciunt
-          autem quas officia fugiat amet ut voluptates veniam consequatur hic
-          labore sint.
-        </p>
-      </div>
+      {data.tasks.map((elem, idx) => {
+        if (elem.active) {
+          return <AcceptTask key={idx} data={elem} />;
+        }
+        if (elem.newTask) {
+          return <NewTask key={idx} data={elem} />;
+        }
+        if (elem.completed) {
+          return <CompleteTask key={idx} data={elem} />;
+        }
+        if (elem.failed) {
+          return <FailedTask key={idx} data={elem} />;
+        }
+      })}
     </div>
   );
 };
