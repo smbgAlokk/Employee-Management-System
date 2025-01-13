@@ -46,7 +46,7 @@ const employees = [
   {
     id: 2,
     firstName: "Roli",
-    email: "roli@gamil.com",
+    email: "roli@gmail.com",
     password: "123",
     taskCounts: {
       active: 1,
@@ -158,7 +158,7 @@ const employees = [
   {
     id: 5,
     firstName: "Karan",
-    email: "employee5@example.com",
+    email: "karan@gmail.com",
     password: "123",
     taskCounts: {
       active: 2,

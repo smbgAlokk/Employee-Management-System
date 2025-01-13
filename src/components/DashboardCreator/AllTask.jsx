@@ -41,7 +41,7 @@ const AllTask = () => {
             </div>
           ))
         ) : (
-          <p className="text-center text-gray-500"> N user data available</p>
+          <p className="text-center text-gray-500"> No user data available</p>
         )}
       </div>
     </div>

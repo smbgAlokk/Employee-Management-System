@@ -2,44 +2,67 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 
 const CreateTask = () => {
-  const [userData, setUserData] = useContext(AuthContext);
-
   const [taskTitle, setTaskTitle] = useState("");
-  const [taskDescription, setTaskDescription] = useState("");
   const [taskDate, setTaskDate] = useState("");
-  const [asignTo, setAsignTo] = useState("");
+  const [assignTo, setAssignTo] = useState("");
   const [category, setCategory] = useState("");
+  const [taskDescription, setTaskDescription] = useState("");
+
+  const [userData, setUserData] = useContext(AuthContext);
 
   const [newTask, setNewTask] = useState({});
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    setNewTask({
+    if (!taskTitle || !taskDate || !assignTo || !category || !taskDescription) {
+      alert("Please fill in all the fields before Submit");
+      return;
+    }
+
+    const newTask = {
       taskTitle,
-      taskDescription,
       taskDate,
       category,
+      taskDescription,
       active: false,
       newTask: true,
       failed: false,
       completed: false,
-    });
+    };
+    // console.log(newTask);
 
     const data = userData;
+    let taskAssigned = false;
+    // console.log(data);
 
     data.forEach(function (elem) {
-      if (asignTo == elem.firstName) {
+      // console.log(elem.firstName);
+      if (assignTo == elem.firstName) {
+        // console.log(elem);
+
         elem.tasks.push(newTask);
+        // console.log(elem);
+
         elem.taskCounts.newTask = elem.taskCounts.newTask + 1;
+        taskAssigned = true;
       }
     });
-    setUserData(data);
-    console.log(data);
 
+    if (!taskAssigned) {
+      alert(
+        `No Employee found with the namer "${assignTo}". Please check and try again.`
+      );
+      return;
+    } else {
+      setUserData(data);
+      // console.log(data);
+    }
+
+    // Reset form fields afetr submission
     setTaskTitle("");
     setCategory("");
-    setAsignTo("");
+    setAssignTo("");
     setTaskDate("");
     setTaskDescription("");
   };
@@ -47,9 +70,7 @@ const CreateTask = () => {
   return (
     <div className="p-5 bg-[#1c1c1c] mt-5 rounded">
       <form
-        onSubmit={(e) => {
-          submitHandler(e);
-        }}
+        onSubmit={submitHandler}
         className="flex flex-wrap w-full items-start justify-between"
       >
         <div className="w-1/2">
@@ -77,15 +98,15 @@ const CreateTask = () => {
             />
           </div>
           <div>
-            <h3 className="text-sm text-gray-300 mb-0.5">Asign to</h3>
+            <h3 className="text-sm text-gray-300 mb-0.5">Assign To</h3>
             <input
-              value={asignTo}
+              value={assignTo}
               onChange={(e) => {
-                setAsignTo(e.target.value);
+                setAssignTo(e.target.value);
               }}
               className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4"
               type="text"
-              placeholder="employee name"
+              placeholder="Employee Name"
             />
           </div>
           <div>
@@ -110,8 +131,7 @@ const CreateTask = () => {
               setTaskDescription(e.target.value);
             }}
             className="w-full h-44 text-sm py-2 px-4 rounded outline-none bg-transparent border-[1px] border-gray-400"
-            name=""
-            id=""
+            placeholder="Enter the task description"
           ></textarea>
           <button className="bg-emerald-500 py-3 hover:bg-emerald-600 px-5 rounded text-sm mt-4 w-full">
             Create Task
