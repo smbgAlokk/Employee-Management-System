@@ -7,7 +7,7 @@ const employees = [
     taskCounts: {
       active: 2,
       newTask: 1,
-      completed: 1,
+      completed: 3,
       failed: 0,
     },
     tasks: [
@@ -32,6 +32,16 @@ const employees = [
         category: "Meeting",
       },
       {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Design new feature",
+        taskDescription: "Create mockups for the new feature",
+        taskDate: "2024-10-09",
+        category: "Design",
+      },
+      {
         active: true,
         newTask: false,
         completed: false,
@@ -40,6 +50,16 @@ const employees = [
         taskDescription: "Resolve bugs reported in issue tracker",
         taskDate: "2024-10-14",
         category: "Development",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Deploy new build",
+        taskDescription: "Deploy the latest build to production",
+        taskDate: "2024-10-09",
+        category: "DevOps",
       },
     ],
   },
