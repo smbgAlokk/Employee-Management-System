@@ -157,8 +157,8 @@ This project leverages **Tailwind CSS** for a modern and responsive UI:
 For any questions or feedback, feel free to reach out:
 
 - **Email:** contact.alokkumarr@gmail.com 📧
-- **GitHub:** [My GitHub Profile](https://github.com/smbgAlokk/Employee-Management-System) 🌐
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/alokkumarr04/) 💼
+- **GitHub:** [My GitHub Profile](https://github.com/smbgAlokk) 🌐
+- **LinkedIn:** [My LinkedIn Profile](https://www.linkedin.com/in/alokkumarr04/) 💼
 
 ---
 
