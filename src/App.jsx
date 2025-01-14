@@ -45,16 +45,16 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("loggedInUser"));
-    if (user && user.data) {
-      const firstName = user.data.firstName;
-      const employee = userData.find((e) => e.firstName === firstName);
-      if (employee) {
-        setLoggedInUserData(employee);
-      }
-    }
-  }, [userData]);
+  // useEffect(() => {
+  //   const user = JSON.parse(localStorage.getItem("loggedInUser"));
+  //   if (user && user.data) {
+  //     const firstName = user.data.firstName;
+  //     const employee = userData.find((e) => e.firstName === firstName);
+  //     if (employee) {
+  //       setLoggedInUserData(employee);
+  //     }
+  //   }
+  // }, [userData]);
 
   return (
     <>

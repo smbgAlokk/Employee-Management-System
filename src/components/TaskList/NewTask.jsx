@@ -47,11 +47,11 @@ const NewTask = ({ data, taskKey }) => {
       taskCount: countToBeUpdated,
       tasks: tasks,
     };
-    console.log(updateEmployee);
-    console.log([
-      updateEmployee,
-      ...userData.filter((e) => e.firstName !== firstName),
-    ]);
+    // console.log(updateEmployee);
+    // console.log([
+    //   updateEmployee,
+    //   ...userData.filter((e) => e.firstName !== firstName),
+    // ]);
 
     const data = [
       updateEmployee,
@@ -63,7 +63,7 @@ const NewTask = ({ data, taskKey }) => {
 
   const ForwardTask = (e, tasks, taskKey) => {
     e.preventDefault();
-    // console.log(forwardTo)
+    // console.log(forwardTo);
 
     const user = JSON.parse(localStorage.getItem("loggedInUser"));
     const firstName = user.data.firstName;
@@ -74,8 +74,8 @@ const NewTask = ({ data, taskKey }) => {
 
     const taskToUpdate = [...tasks];
     const taskToforward = taskToUpdate[taskKey];
-    // console.log(taskToforward)
-    // console.log(taskKey)
+    // console.log(taskToforward);
+    // console.log(taskKey);
     // console.log(taskToUpdate[taskKey]);
 
     taskToUpdate[taskKey].active = false;
@@ -83,7 +83,7 @@ const NewTask = ({ data, taskKey }) => {
     taskToUpdate[taskKey].newTask = false;
     taskToUpdate[taskKey].failed = false;
     taskToUpdate[taskKey].forwarded = true;
-    // console.log(taskToUpdate[taskKey])
+    // console.log(taskToUpdate[taskKey]);
 
     taskToUpdate[taskKey].forwardedTo = forwardTo;
 
